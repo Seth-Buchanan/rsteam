@@ -3,6 +3,6 @@
 games=$(find ~/.steam/steam/steamapps/ -maxdepth 1 -type f -name '*.acf' -exec awk -F '"' '/"appid|name/{ printf $4 "\t" } END { print "" }' {} \; | sort -k 2)
 
 selected=$(cut -f2 <<< "$games" | rofi -fuzzy -dmenu -format 'd')
-[[ -z "$selected" ]] && exit # exit if "$selected" is empty
+[[ -z "$selected" ]] && exit# exit if "$selected" is empty
 
 steam steam://rungameid/`awk -v lineNum="$selected" 'NR==lineNum { print $1 }' <<< $games`
