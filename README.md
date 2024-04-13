@@ -1,8 +1,9 @@
 # rsteam
-Script for launching steam games with Rofi
-
+Simple script for launching steam games with Rofi
 ![rsteam example](example.png)
+
 ## Usage
-rsteam is meant to be a quick, portable steam menu with only rofi as a special dependancy. To use, install rofi and put the script on your path. 
+The only special dependancy that rsteam uses is rofi and requires no configuration. rsteam quickly reads the manifest for each installed steam game for the information that it needs on startup. All rsteam needs is to be put on the system's PATH and ran. 
+
 
 
